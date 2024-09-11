@@ -1,0 +1,1264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    user-select: none;
+}
+
+@font-face {
+    font-family: text;
+    src: url(./fonts/63bf3e1c32ea7b11e01bdf94_HelveticaNeue-Light.otf);
+}
+
+@font-face {
+    font-family: head;
+    src: url(./fonts/63bf3e1c32ea7b2c3d1bdf93_Humane-Bold.otf);
+}
+
+@font-face {
+    font-family: italic;
+    src: url(./fonts/63bf3e1c32ea7b80ef1bdf9f_bodoni-seventytwo-itc-book-italic.ttf);
+}
+
+@font-face {
+    font-family: headLight;
+    src: url(./fonts/63bf3e1c32ea7bb19e1bdfad_Humane-Medium.otf);
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-family: text;
+    font-weight: 500;
+}
+
+h1,
+h2 {
+    font-family: head;
+}
+
+#main {
+    background-color: #000;
+}
+
+#loader {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #5546FF;
+}
+
+.heads {
+    height: fit-content;
+    overflow: hidden;
+}
+
+.heads h1 span {
+    display: inline-block;
+}
+
+#page1 {
+    width: 100vw;
+    height: 100vh;
+    background-color: #5546FF;
+    position: relative;
+    z-index: 3;
+}
+
+#page1 nav {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0vw 2vw;
+}
+
+#page1 nav h1 {
+    font-size: 6vw;
+    line-height: 5.2vw;
+    font-family: head;
+}
+
+#page1 nav #right {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+#page1 nav #right h5 {
+    font-size: 1vw;
+    border: 1px solid #AAB900;
+    font-family: text;
+    padding: 0.5vw 1vw;
+    border-radius: 50px;
+    color: #AAB900;
+}
+
+#page1 #content {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#page1 #content #heading h1 {
+    font-size: 50vw;
+    line-height: 42vw;
+    color: #fff;
+    font-family: head;
+    margin-top: 0vw;
+}
+
+#page1 #content .tracker {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.emoji {
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-image: url(./images/emojiFacee.png);
+    background-size: cover;
+    border-radius: 100%;
+}
+
+.emoji-face {
+    width: 225px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vw;
+}
+
+.eyes {
+    display: flex;
+    justify-content: center;
+    gap: 3.5vw;
+}
+
+.eyes img {
+    width: 60px;
+    height: 60px;
+    animation: rotateEyes 6s infinite linear;
+}
+
+.mouth-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.mouth {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    margin-top: 2vw;
+    background: #000;
+    animation: wonderFace 2.5s infinite cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes rotateEyes {
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    100% {
+        transform: rotate(365deg);
+    }
+}
+
+@keyframes wonderFace {
+    0% {
+        height: 40px;
+    }    
+    80% {
+        height: 80px;
+    } 
+    100% {
+        height: 40px;
+    } 
+}
+
+#page1 #content #rotating-img {
+    width: 18vw;
+    height: 18vw;
+    background-color: transparent;
+    background-image: url(https://cdn.prod.website-files.com/63bf3e1c32ea7ba16d1bdf88/63bf3e1c32ea7b06931bdfa4_badge.svg);
+    background-size: cover;
+    position: absolute;
+    top: 65%;
+    left: 63%;
+    scale: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: rotatingImage 5s infinite linear;
+}
+
+#page1 #content #rotating-img h3 {
+    font-size: 3.5vw;
+    font-family: head;
+}
+
+#page1 #content #text h5 {
+    font-size: 1.2vw;
+    font-weight: 500;
+    color: #fff;
+}
+
+#page1 #content #text h5 span {
+    font-size: 1.7vw;
+    font-family: italic;
+}
+
+#page2 {
+    width: 100vw;
+    height: fit-content;
+    padding-top: 8vw;
+    background-color: #1C1C1C;
+    color: #fff;
+}
+
+#page2 #heading {
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+#page2 #heading h1 {
+    font-size: 10vw;
+    line-height: 9vw;
+    font-weight: 500;
+}
+
+#page2 #heading h5 {
+    font-size: 1.2vw;
+}
+
+#page2 #heading h5 span {
+    font-size: 1.7vw;
+    font-family: italic;
+}
+
+#page2 .swiper {
+    width: 100%;
+    height: 85vh;
+    margin-top: 3vw;
+    display: flex;
+    gap: 0vw;
+    position: relative;
+}
+
+#page2 #cursor {
+    height: 8vw;
+    width: 4vw;
+    position: fixed;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000000;
+    font-weight: 900;
+    z-index: 999;
+    transform: translate(-50%, -50%) scale(0);
+    pointer-events: none;
+}
+
+#page2 #cursor h5, 
+#page2 #cursor i {
+    font-size: 1.2vw;
+}
+
+#page2 .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    position: relative;
+}
+
+#page2 .swiper-slide #image {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#page2 .swiper-slide #image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#page2 .swiper-slide #overlay {
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2vw;
+}
+
+#page2 .swiper-slide #overlay #upper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#page2 .swiper-slide #overlay #upper #left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1vw;
+}
+
+#page2 .swiper-slide #overlay #upper #left h5 {
+    font-size: 1vw;
+    font-weight: 500;
+    text-align: left;
+}
+
+#page2 .swiper-slide #overlay #upper #left h6 {
+    font-size: 0.9vw;
+    font-weight: 900;
+}
+
+#page2 .swiper-slide #overlay #upper>h5 {
+    font-weight: 500;
+    height: 1.5vw;
+    display: flex;
+    align-items: center;
+    padding: 0.8vw 1vw; 
+    border: 1px solid #fff;
+    border-radius: 50px;
+}
+
+#page2 .swiper-slide #overlay #lower {
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+#page2 .swiper-slide #overlay #lower h1 {
+    font-size: 5vw;
+    line-height: 4vw;
+    color: #fff !important;
+    text-align: left;
+}
+
+#page2 .swiper-slide #overlay #lower i {
+    font-size: 3vw;
+    font-weight: 500;
+    column-rule: #fff;
+}
+
+#page2 #swiper-slide1 #image video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#page2 #swiper-slide1,
+#page2 #swiper-slide3 {
+    color: #fff;
+}
+
+#page2 #swiper-slide2 #upper,
+#page2 #swiper-slide4 #upper {
+    color: #000;
+}
+
+#page2 #swiper-slide2 #overlay #upper>h5{
+    border: 1px solid #000;
+}
+
+#page2 #swiper-slide4 #overlay #upper>h5{
+    border: 1px solid #000;
+}
+
+#page3 {
+    width: 100%;
+    height: 250vh;
+    background-color: #BFFF0A;
+    display: flex;
+    flex-direction: column;
+    color: #1C1C1C;
+    padding: 0vw 2vw;
+    padding-top: 10vw;
+    position: relative;
+}
+
+#page3 #upper{
+    width: 100%;
+    height: 58%;
+    display: flex;
+    position: relative;
+}
+
+#page3 #upper #left {
+    width: 50%;
+    height: 100%;
+}
+
+#page3 #left #heading h1 {
+    font-size: 10vw;
+    line-height: 9vw;
+}
+
+#page3 #left #heading-2 h1 {
+    font-size: 10vw;
+    line-height: 9vw;
+}
+
+#page3 #left #svg {
+    width:20vw;
+    height: 30vw;
+}
+
+#page3 #left #text {
+    width: 100%;
+    padding-left: 25vw;
+}
+
+#page3 #left #text h5 {
+    font-size: 1vw;
+    font-weight: 500;
+}
+
+#page3 #left #floating-img {
+    scale: 0.5;
+    position: absolute;
+    top: 55%;
+    left: -14.3%;
+}
+
+#page3 #upper #right {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    padding-top: 10vw;
+}
+
+#page3 #right #main-img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#page3 #right #main-img img {
+    height: 52vw;
+    object-fit: cover;
+}
+
+#page3 #right #rotating-img {
+    width: 18vw;
+    height: 18vw;
+    background-color: transparent;
+    background-image: url(https://cdn.prod.website-files.com/63bf3e1c32ea7ba16d1bdf88/63bf3e1c32ea7b06931bdfa4_badge.svg);
+    background-size: cover;
+    position: absolute;
+    top: 68%;
+    left: -10%;
+    scale: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: rotatingImage 5s infinite linear;
+}
+
+#page3 #right #rotating-img h3 {
+    font-size: 3.5vw;
+    font-family: head;
+}
+
+#page3 #lower {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#page3 #lower h5 {
+    font-size: 1.2vw;
+    text-align: center;
+    margin-bottom: 5vw;
+}
+
+#page3 #lower h1 {
+    font-size: 10vw;
+    line-height: 9vw;
+    text-align: center;
+}
+
+#page3 #lower #head-2 {
+    transform: translateX(-10%);
+}
+
+#page3 #lower #floating-img2 {
+    scale: 0.5;
+    position: absolute;
+    top: 83%;
+    left: 60%;
+}
+
+#page4 {
+    width: 100vw;
+    height: 130vh;
+    background-color: #000;
+    color: #fff;
+    padding-top: 15vw;
+}
+
+#page4 #heading {
+    width: 100%;
+}
+
+#page4 #heading h1 {
+    font-size: 10vw;
+    text-align: center;
+}
+
+#page4 #text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8vw;
+    margin-top: -3vw;
+}
+
+#page4 #text #inner-text {
+    width: fit-content;
+    padding: 0.5vw 1vw;
+    background-color: #FF7BCA;
+    rotate: -10deg;
+}
+
+#page4 #text h5 {
+    font-size: 1.1vw;
+    color: #000;
+    text-align: center;
+}
+
+#page4 #text h5 span {
+    font-size: 1.1vw;
+    font-weight: 500;
+    font-family: italic;
+}
+
+#page4 .heads h1 {
+    font-size: 6vw;
+    font-weight: 500;
+    text-align: center;
+    font-family: headLight;
+}
+
+#page5 {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(46, 46, 46);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4vw;
+    position: relative;
+}
+
+#page5 #video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+#page5 #video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#page5 #heading {
+    height: 20vw;
+    z-index: 2;
+}
+
+#page5 #heading h1 {
+    font-size: 25vw;
+}
+
+#page5 #button {
+    padding: 0.5vw 1vw;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    z-index: 2;
+}
+
+#page5 #button h5 {
+    font-size: 1vw;
+}
+
+#page5>h5 {
+    font-size: 1.2vw;
+    text-align: center;
+    z-index: 2;
+}
+
+#page5>h5 span {
+    font-size: 1.5vw;
+    font-family: italic;
+}
+
+#page6 {
+    width: 100vw;
+    height: fit-content;
+    padding-top: 8vw;
+    background-color: #1C1C1C;
+    color: #fff;
+}
+
+#page6 #heading {
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+#page6 #heading h1 {
+    font-size: 10vw;
+    line-height: 9vw;
+    font-weight: 500;
+}
+
+#page6 #heading h5 {
+    font-size: 1.2vw;
+}
+
+#page6 #heading h5 span {
+    font-size: 1.7vw;
+    font-family: italic;
+}
+
+#page6 #cards {
+    width: 100%;
+    height: 100vh;
+    margin-top: 1vw;
+    display: flex;
+}
+
+#page6 #cards .card {
+    width: 33.3%;
+    height: 100%;
+    position: relative;
+}
+
+#page6 #cards .card #image {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page6 #cards .card #image img {
+    object-fit: cover;
+}
+
+#page6 #cards .card #text {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    padding-left: 3vw;
+    color: #000;
+}
+
+#page6 #cards .card #text h1 {
+    font-size: 5vw;
+    font-weight: 500;
+}
+
+#page6 #cards #card1 {
+    background-color: #BFFF0A;
+}
+
+#page6 #cards #card2 {
+    background-color: #5546FF;
+}
+
+#page6 #cards #card3 {
+    background-color: #FF7BCA;
+}
+
+#page7 {
+    width: 100vw;
+    height: 110vh;
+    background-color: #FF7BCA;
+    border-top: 1px solid black;
+    padding: 0vw 2vw;
+    padding-top: 10vw;
+}
+
+#page7 #heading {
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: 3vw;
+}
+
+#page7 #heading h1 {
+    font-size: 10vw;
+    line-height: 9vw;
+    font-weight: 500;
+    color: #1C1C1C;
+}
+
+#page7 #heading h5 {
+    font-size: 1.2vw;
+}
+
+#page7 #heading h5 span {
+    font-size: 1.5vw;
+    font-family: italic;
+}
+
+#page7 #sections {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#page7 #sections .section {
+    width: 100%;
+    height: 7.5vw;
+    border-bottom: 1px solid black;
+    color: #1C1C1C;
+    position: relative;
+}
+
+#page7 #sections .section:hover {
+    cursor: pointer;
+}
+
+#page7 #sections .section #heading {
+    width: fit-content;
+    height: 7.5vw;
+    display: flex;
+    align-items: center;
+}
+
+#page7 #sections .section #heading h1 {
+    font-size: 5vw;
+    line-height: 4vw;
+    font-family: headLight;
+}
+
+#page8 {
+    width: 100vw;
+    height: 250vh;
+    background-color: #000;
+    color: #fff;
+    padding-top: 15VW;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#page8 #floating-img {
+    scale: 0.5;
+    position: absolute;
+    top: 35%;
+    left: -10%;
+}
+
+
+#page8 #heading h1 {
+    font-size: 20vw;
+}
+
+#page8 #image img {
+    height: 79vw;
+}
+
+#page8 #button {
+    padding: 0.5vw 1vw;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    margin-top: 5vw;
+}
+
+#page8 #button h5 {
+    font-size: 1.1vw;
+}
+
+#page8 #rotating-img {
+    width: 18vw;
+    height: 18vw;
+    background-color: transparent;
+    background-image: url(https://cdn.prod.website-files.com/63bf3e1c32ea7ba16d1bdf88/63bf3e1c32ea7b06931bdfa4_badge.svg);
+    background-size: cover;
+    position: absolute;
+    top: 77%;
+    left: 68%;
+    scale: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: rotatingImage 5s infinite linear;
+}
+
+#page8 #rotating-img h3 {
+    font-size: 3.5vw;
+    font-family: head;
+    color: #000;
+}
+
+
+#page8 #last {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw;
+    margin-top: 7vw;
+}
+
+#page8 #last h5 {
+    font-size: 1.2vw;
+}
+
+#page8 #last h5 span {
+    text-decoration: underline;
+}
+
+@keyframes rotatingImage {
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    100% {
+        transform: rotate(365deg);
+    }    
+}
+
+
+@media (max-width: 600px) {
+    #page1 nav h1 {
+        font-size: 13vw;
+        line-height: 5.2vw;
+        font-family: head;
+    }
+
+    #page1 nav #right h5 {
+        font-size: 2vw;
+    }
+
+    #page1 #content #heading {
+        height: fit-content;
+        margin-top: -15vw;
+    }
+
+    #page1 #content #heading h1 {
+        font-size: 80vw;
+        line-height: 68vw;
+    }
+
+    .emoji {
+        width: 170px;
+        height: 170px;
+    }
+
+    .emoji-face {
+        width: 22px;
+        height: 160px; 
+    }
+
+    .eyes {
+        display: flex;
+        justify-content: center;
+        gap: 5vw;
+        margin-top: 7vw;
+    }
+    
+    .eyes img {
+    width: 25px;
+    height: 25px;
+    }
+
+    .mouth {
+        width: 20px;
+        height: 20px;
+        margin-top: 7vw;
+    }
+
+    @keyframes wonderFace {
+        0% {
+            height: 20px;
+        }    
+        80% {
+            height: 40px;
+        } 
+        100% {
+            height: 20px;
+        } 
+    }
+
+    #page1 #content #rotating-img {
+        width: 18vw;
+        height: 18vw;
+        scale: 1.5;
+        top: 58%;
+        left: 63%;
+        animation: rotatingImage 5s infinite linear;
+    }
+
+    #page1 #content #text h5 {
+        font-size: 3vw;
+    }
+
+    #page1 #content #text h5 span {
+        font-size: 3.5vw;
+    }
+
+    #page2 {
+        width: 100vw;
+        height: 60vh;
+        padding-top: 8vw;
+        background-color: #1C1C1C;
+        color: #fff;
+    }
+
+    #page2 #heading {
+        padding: 0vw 2vw;
+    }
+
+    #page2 #heading h1 {
+        font-size: 15vw;
+        line-height: 15vw;
+        font-family: headLight;
+    }
+
+    #page2 #heading h5 {
+        font-size: 3vw;
+    }
+
+    #page2 #heading h5 span {
+        font-size: 3.5vw;
+    }
+
+    #page2 #cursor {
+        display: none;
+    }
+
+    #page2 .swiper-wrapper {
+        width: fit-content;
+    }
+
+    #page2 .swiper-slide {
+        width: 50vw;
+        height: 30vh;
+    }
+
+    #page2 .swiper-slide #overlay #upper #left h5 {
+        font-size: 2vw;
+        font-weight: 500;
+        text-align: left;
+    }
+
+    #page2 .swiper-slide #overlay #upper #left h6 {
+        font-size: 1.5vw;
+        font-weight: 900;
+    }
+
+    #page2 .swiper-slide #overlay #upper>h5 {
+        width: 12vw;
+        font-size: 1.2vw;
+        font-weight: 500;
+        height: 1.5vw;
+        display: flex;
+        align-items: center;
+        padding: 0.8vw 1vw; 
+        border: 1px solid #fff;
+        border-radius: 50px;
+    }
+
+    #page2 .swiper-slide #overlay #lower h1 {
+        font-size: 6vw;
+        line-height: 5vw;
+        color: #fff !important;
+        text-align: left;
+    }
+
+    #page3 {
+        height: 120vh;
+    }
+
+    #page3 #left #heading h1 ,
+    #page3 #left #heading-2 h1 {
+        font-size: 13vw;
+        line-height: 12vw;
+    }
+
+    #page3 #left #text {
+        width: 100%;
+        padding-left: 10vw;
+    }
+
+    #page3 #left #text h5 {
+        font-size: 3vw;
+        font-weight: 600;
+    }
+
+    #page3 #left #floating-img {
+        scale: 0.2;
+        position: absolute;
+        top: 25%;
+        left: -85%;
+    }
+
+    #page3 #upper #right {
+        padding-top: 25vw;
+    }
+
+    #page3 #right #main-img img {
+        height: 55vw;
+        object-fit: cover;
+    }
+    
+    #page3 #right #rotating-img {
+        width: 18vw;
+        height: 18vw;
+        scale: 1.5;
+        top: 50%;
+        left: 20%;
+        animation: rotatingImage 5s infinite linear;
+    }
+
+    #page3 #lower h5 {
+        font-size: 3vw;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 15vw;
+    }
+
+    #page3 #lower #floating-img2 {
+        scale: 0.2;
+        position: absolute;
+        top: 75%;
+        left: 30%;
+    }
+
+    #page4 {
+        height: 90vh;
+        padding-top: 27vh;
+    }
+
+    #page4 #heading h1 {
+        font-size: 25vw;
+        text-align: center;
+    }
+
+    #page4 #text {
+        margin-bottom: 8vw;
+        margin-top: -6vw;
+    }
+
+    #page4 #text h5 {
+        font-size: 3vw;
+    }
+
+    #page4 #text h5 span {
+        font-size: 3.5vw;
+    }
+
+    #page4 .heads h1 {
+        font-size: 9vw;
+        font-family: headLight;
+    }
+
+    #page5 #heading {
+        height: 32vw;
+        z-index: 2;
+    }
+
+    #page5 #heading h1 {
+        font-size: 40vw;
+    }
+
+    #page5 #button {
+        padding: 1vw 2vw;
+    }
+
+    #page5 #button h5 {
+        font-size: 3vw;
+    }
+
+    #page5>h5 {
+        font-size: 3vw;
+    }
+
+    #page5>h5 span {
+        font-size: 3.5vw;
+    }
+
+    #page6 #heading h1 {
+        font-size: 15vw;
+        line-height: 15vw;
+        font-family: headLight;
+        /* font-weight: 500; */
+    }
+
+    #page6 #heading h5 {
+        font-size: 3vw;
+    }
+    
+    #page6 #heading h5 span {
+        font-size: 3.5vw;
+        font-family: italic;
+    }
+
+    #page6 #cards {
+        width: 100%;
+        height: 40vh;
+        margin-top: 5vw;
+        display: flex;
+    }
+
+    #page6 #cards .card #image img {
+        height: 35vw;
+    } 
+    
+    #page6 #cards .card #text h1 {
+        font-size: 10vw;
+        font-weight: 500;
+    }
+
+    #page7 {
+        width: 100vw;
+        height: 60vh;
+        background-color: #FF7BCA;
+        border-top: 1px solid black;
+        padding: 0vw 2vw;
+        padding-top: 10vw;
+    }
+    
+    #page7 #heading h1 {
+        font-size: 15vw;
+        line-height: 13vw;
+    }
+
+    #page7 #heading h5 {
+        font-size: 3vw;
+    }
+    
+    #page7 #heading h5 span {
+        font-size: 3.5vw;
+        font-family: italic;
+    }
+
+    #page7 #sections .section {
+        width: 100%;
+        height: 20vw;
+        border-bottom: 1px solid black;
+        color: #1C1C1C;
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    #page7 #sections .section #heading {
+        height: 9vw;
+        margin-top: 4vw;
+    }
+
+    #page7 #sections .section #heading h1 {
+        font-size: 10vw;
+        font-family: headLight;
+    }
+
+    #page8 {
+        width: 100vw;
+        height: 100vh;
+        padding-top: 20vh;
+    }
+
+    #page8 #floating-img {
+        scale: 0.2;
+        position: absolute;
+        top: 30%;
+        left: -80%;
+    }
+
+    #page8 #heading h1 {
+        font-size: 25vw;
+    }
+
+    #page8 #image img {
+        height: 99vw;
+    }
+
+    #page8 #button {
+        padding: 1vw 2vw;
+    }
+    
+    #page8 #button h5 {
+        font-size: 3vw;
+    }
+
+    #page8 #rotating-img {
+        display: none;
+    }
+
+    #page8 #last {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2vw;
+        margin-top: 7vw;
+    }
+
+    #page8 #last h5 {
+        font-size: 3vw;
+        text-align: center;
+    }
+    
+    #page8 #last h5 span {
+        text-decoration: underline;
+    }
+    
+  }
+  
